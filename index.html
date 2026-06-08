@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <title>Interactive pricing component</title>
   <link rel="stylesheet" href="src/output.css">
-  <script src="./app.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="./app.js" defer></script>
 </head>
 <style> 
   .colr-1 {color: #a5f3eb}
-  .colr-1 {color: rgb(16, 213, 194)}
+  .colr-1 {color: #10d5c2}
+  .colr-1 {color: #0fa5ad}
   .colr-1 {color: #feece7}
   .colr-1 {color: #ff8c66}
   .colr-1 {color: #bdccff}
@@ -26,29 +28,22 @@
     <p class="text-[15px] text-[#858fad] px-[70px] text-center">Sign-up for our 30-day trial. No credit card required.</p>
   </div>
   <div class="card-contianer mx-auto bg-white max-w-[540px] rounded-xl py-7 flex flex-col gap-10 divide-y-[1px] shadow-[0px_10px_20px_0px_rgba(0,0,0,0.1)]">
-    <div class="top-section grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-9 justify-center text-center">
+    <div class="top-section px-9 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-9 justify-center text-center sm:text-left">
       <div class="pageviews">
-        <span class="text-[#858fad] text-sm font-semibold capitalize tracking-widest">100K Pageviews</span>
+        <span class="text-[#858fad] text-sm font-semibold capitalize tracking-widest"><span class="view-number">100K</span> Pageviews</span>
       </div>
-      <div class="pricing-nav px-6 h-[40px] flex items-center justify-center w-full col-span-full relative">
-        <div class="nav w-full h-[10px] rounded-lg bg-[#eaeefb]">
-          <div class="nav-fill h-full w-[50%] bg-[#a5f3eb] rounded-lg"></div>
-        </div>
-        <div class="nav-handler shadow-[0px_8px_20px_0px_rgba(16,213,194,0.7)] cursor-pointer group hover:bg-[#a5f3eb] transition-colors duration-500 ease-out size-[40px] rounded-full bg-[#10d5c2] flex justify-center items-center absolute top-[50%] translate-y-[-50%]">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="13">
-            <g fill="#80FFF3" fill-rule="evenodd"><path class="group-hover:fill-white transition-colors duration-500 ease-out" d="M16 2.558v7.884a1 1 0 001.735.679l3.639-3.943a1 1 0 000-1.356l-3.64-3.943A1 1 0 0016 2.558zM6 2.558v7.884a1 1 0 01-1.735.679L.626 7.178a1 1 0 010-1.356l3.64-3.943A1 1 0 016 2.558z"/></g>
-          </svg>
-        </div>
+      <div class="pricing-nav h-[40px] flex items-center justify-center w-full col-span-full relative">
+        <input class="nav-bar w-full" type="range" name="" id="" max="100" min="0">
       </div>
-      <div class="price flex items-center justify-center gap-1 col-start-2 row-start-1">
+      <div class="price flex items-center justify-center gap-1 sm:col-start-2 sm:row-start-1 sm:justify-end">
         <span class="current-price text-[#293356] text-3xl font-bold">$16.00</span>
         <span class="text-[#858fad] text-sm">/ month</span>
       </div>
-      <div class="monthly-billing col-span-full flex gap-4 mx-auto pr-9 text-[13px] text-[#858fad]">
+      <div class="monthly-billing col-span-full flex gap-3 mx-auto pr-9 text-[13px] text-[#858fad]">
         <div class="flex gap-3">
           <span class="">Monthly Billing</span>
-          <div class="btn h-[20px] w-[40px] bg-[#cdd7ee] rounded-[50px] flex items-center px-[3px]">
-            <div class="btn-handler size-[14px] rounded-full bg-white cursor-pointer"></div>
+          <div class="btn h-[20px] w-[40px] bg-[#cdd7ee] rounded-[50px] flex items-center relative">
+            <div class="btn-handler size-[14px] rounded-full bg-white cursor-pointer absolute left-1 translate-x-[0px] transition-all duration-300 ease-out"></div>
           </div>
         </div>
         <div class="flex">
@@ -56,15 +51,15 @@
         </div>
       </div>
     </div>
-    <div class="botton-section px-10 pt-8 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-6 text-center">
-      <div class="features">
+    <div class="botton-section px-9 pt-8 grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-6 text-center">
+      <div class="features sm:justify-self-start">
         <ul class="text-[13px] text-[#858fad] text-center">
           <li class="flex w-full items-center gap-3"><img src="images/icon-check.svg" alt=""><span class="">Unlimited websites</span></li>
           <li class="flex w-full items-center gap-3"><img src="images/icon-check.svg" alt=""><span class="">100% data ownership</span></li>
           <li class="flex w-full items-center gap-3"><img src="images/icon-check.svg" alt=""><span class="">Email reports</span></li>
         </ul>
       </div>
-      <div class="start-btn size-full cursor-pointer bg-[#293356] text-[#bdccff] hover:text-white transition-colors duration-300 ease-out w-fit h-[45px] text-[13px] rounded-[30px] px-10 font-medium py-3 self-center">
+      <div class="start-btn sm:justify-self-end size-full cursor-pointer bg-[#293356] text-[#bdccff] hover:text-white transition-colors duration-300 ease-out w-fit h-[45px] text-[13px] rounded-[30px] px-10 font-medium py-3 self-center">
         <button class="size-full">Start my trial</button>
       </div>
     </div>
